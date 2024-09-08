@@ -12,7 +12,7 @@ const path = require('path')
 dotenv.config();
 
 const app = express();
-const PORT = 4001;
+const PORT = process.env.PORT || 4001;
 
 mongoose.connect(process.env.MONGO_URL).then(()=>{
     
@@ -25,7 +25,9 @@ app.use('/vendor',vendorRoutes)
 app.use('/firm',firmRoutes)
 app.use('/product',productRoutes)
 app.use('/uploads',express.static('uploads'))
-
+app.use('/',(req,res)=>{
+    res.send('<h1>Welcome to suby</h1>')
+})
 app.listen(PORT,(req,res)=>{
     console.log(`this server is running at ${PORT}`)
 })
