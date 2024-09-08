@@ -26,7 +26,7 @@ app.use('/firm',firmRoutes)
 app.use('/product',productRoutes)
 app.use('/uploads',express.static('uploads'))
 app.use('/',(req,res)=>{
-    res.send('<h1>Welcome to suby</h1>')
+    res.send('<h1>Welcome to chandra sekhar</h1>')
 })
 app.listen(PORT,(req,res)=>{
     console.log(`this server is running at ${PORT}`)
