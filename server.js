@@ -12,7 +12,7 @@ const path = require('path')
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 4001;
+const PORT = process.env.PORT || 4001
 
 mongoose.connect(process.env.MONGO_URL).then(()=>{
     
